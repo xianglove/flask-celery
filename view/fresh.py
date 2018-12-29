@@ -2,7 +2,7 @@
 from flask import jsonify, request
 from core import app
 from config import Config
-
+import time
 
 
 @app.route('/')
@@ -14,7 +14,7 @@ def hello_world():
 def sync_status():
     response = {
         "msg": "成功",
-        "success": "true"
+        "success": True
     }
     return jsonify(response)
 
@@ -23,7 +23,7 @@ def sync_status():
 def decrypt():
     response = {
         "msg": "成功",
-        "success": "true",
+        "success": True,
         "data": "15210910321"
     }
 
@@ -34,7 +34,7 @@ def decrypt():
 def get_status():
     response = {
         "msg": "成功",
-        "success": "true",
+        "success": True,
         "status": 1
     }
     return jsonify(response)
