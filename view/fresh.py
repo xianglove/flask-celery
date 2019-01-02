@@ -10,7 +10,7 @@ def hello_world():
     return 'Hello World!'
 
 
-@app.route('/api/tms/syncCollectionStatus/')
+@app.route('/api/tms/syncCollectionStatus', methods=['GET'])
 def sync_status():
     response = {
         "msg": "成功",
@@ -19,7 +19,7 @@ def sync_status():
     return jsonify(response)
 
 
-@app.route('/api/tms/decrypt/')
+@app.route('/api/tms/decrypt', methods=['GET'])
 def decrypt():
     response = {
         "msg": "成功",
@@ -30,7 +30,7 @@ def decrypt():
     return jsonify(response)
 
 
-@app.route('/api/tms/collectionStatus/')
+@app.route('/api/tms/collectionStatus', methods=['GET'])
 def get_status():
     response = {
         "msg": "成功",
@@ -40,7 +40,7 @@ def get_status():
     return jsonify(response)
 
 
-@app.route('/api/tms/collection/')
+@app.route('/api/tms/collection', methods=['GET'])
 def get_detail():
     collection_id = request.args.get('collectionId')
     config = Config()
