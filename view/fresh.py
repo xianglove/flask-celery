@@ -35,7 +35,7 @@ def get_status():
     response = {
         "msg": "成功",
         "success": True,
-        "status": 1
+        "status": 0
     }
     return jsonify(response)
 
