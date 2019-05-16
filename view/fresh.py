@@ -50,3 +50,15 @@ def get_detail():
     result['data']['orderItems'][1]['orderId'] = '7' + str(int(time.time()))
 
     return jsonify(result)
+
+
+@app.route('/trade/getRefundResult', methods=['GET'])
+def get_refund_result():
+    data = {
+        'code': '0',
+        'result': {
+            'failFinal': 1
+        }
+    }
+
+    return jsonify(data)
