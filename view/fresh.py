@@ -52,13 +52,19 @@ def get_detail():
     return jsonify(result)
 
 
-@app.route('/trade/getRefundResult', methods=['GET'])
+@app.route('/trade/getRefundResult/', methods=['GET'])
 def get_refund_result():
     data = {
         'code': '0',
         'result': {
-            'failFinal': 1
+            'failFinal': True
         }
     }
 
     return jsonify(data)
+
+
+@app.route('/trade/refundOfflineFinish', methods=['GET'])
+def refund_offline():
+
+    return jsonify({'code': 0})
