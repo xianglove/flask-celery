@@ -64,7 +64,7 @@ def get_refund_result():
     return jsonify(data)
 
 
-@app.route('/trade/refundOfflineFinish', methods=['GET'])
+@app.route('/trade/refundOfflineFinish', methods=['POST'])
 def refund_offline():
 
     return jsonify({'code': 0})
