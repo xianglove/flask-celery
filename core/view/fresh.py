@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import jsonify, request
 from core import app
-from config import Config
+from core.const.data_config import Config
 import time
 
 

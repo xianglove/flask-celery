@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask
+
+
 # from configs.configs import Config
 # from flask_sqlalchemy import SQLAlchemy
 
@@ -13,3 +15,4 @@ def create_app():
 
 app = create_app()
 # db = SQLAlchemy()
+import core.view

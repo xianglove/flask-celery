@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-import view
 from core import app
 
 if __name__ == '__main__':
