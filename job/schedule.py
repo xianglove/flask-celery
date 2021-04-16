@@ -8,13 +8,16 @@ beat_schedule = {
     # 每 30秒执行一次。 秒级别可以用 timedelta, 分钟级别及以上可以用 crontab
     'task-one-function': {
         'task': 'job.tasks.task_one.task_one_function',
-        'schedule': timedelta(seconds=30),
+        'schedule': timedelta(seconds=20),
         'kwargs': {
         }
     },
     # 每周1早上8：20 分执行
     'task-two-function': {
         'task': 'job.tasks.task_one.task_two_function',
-        'schedule': crontab(minute=20, hour=8, day_of_week=1)
+        'schedule': crontab(minute=20, hour=8, day_of_week=1),
+        'kwargs': {
+
+        }
     }
 }
